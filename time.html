@@ -1,0 +1,81 @@
+<html>
+<head>
+</head>
+<body>
+</body>
+<script type="text/javascript">
+ 
+// Set the two dates
+var millennium =new Date(2000, 0, 1) //Month is 0-11 in JavaScript
+today=new Date()
+// Get 1 day in milliseconds
+var one_day=1000*60*60*24
+ 
+//Calculate difference btw the two dates, and convert to days
+document.write(Math.ceil((today.getTime()-millennium.getTime())/(one_day))+
+" days has gone by since the millennium!")
+  
+</script>
+</html>
+<!-- Use this to help calculate days, hours, minutes, seconds
+     Reload every second
+
+
+function timeSince(date) {
+
+    var seconds = Math.floor((new Date() - date) / 1000);
+
+    var interval = Math.floor(seconds / 31536000);
+
+    if (interval > 1) {
+        return interval + " years";
+    }
+    interval = Math.floor(seconds / 2592000);
+    if (interval > 1) {
+        return interval + " months";
+    }
+    interval = Math.floor(seconds / 86400);
+    if (interval > 1) {
+        return interval + " days";
+    }
+    interval = Math.floor(seconds / 3600);
+    if (interval > 1) {
+        return interval + " hours";
+    }
+    interval = Math.floor(seconds / 60);
+    if (interval > 1) {
+        return interval + " minutes";
+    }
+    return Math.floor(seconds) + " seconds";
+}
+
+http://stackoverflow.com/questions/3121285/auto-load-and-refresh-div-every-10-seconds-with-jquery
+
+http://stackoverflow.com/questions/15998853/refresh-a-div-with-php-data-every-10-seconds-using-jquery
+
+http://www.webgeekly.com/tutorials/how-to-dynamically-update-your-content-every-few-seconds/
+
+http://stackoverflow.com/questions/25446628/ajax-jquery-refresh-div-every-5-seconds
+
+
+emailWhatever.sh
+
+#!/bin/bash
+# Henry Quinn
+
+recipients="henryquinniv@gmail.com"
+subject="Mac did it!"
+from="McKeighry.com"
+
+message_txt="I'm not really sure how... I think he cheated. But Mac did it. Give him the domain."
+
+/usr/sbin/sendmail "$recipients" << EOF
+subject:$subject
+from:$from
+$message_txt
+EOF
+
+
+
+-->
+
